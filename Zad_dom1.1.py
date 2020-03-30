@@ -17,7 +17,6 @@ I niech program sprawdzi i powie, za co trzeba będzie zapłacić więcej - za b
 """
 
 
-
 def costs_calculator(price_for_kg, quantity):
     total_cost = float(price_for_kg) * float(quantity)
 
@@ -64,8 +63,6 @@ def main():
     print(f"Całkowity koszt zakupu {int(quantity_banana)} kilogramów babanów to {costs_banana} PLN.\n")
 
     what_is_more(costs_bread, costs_banana)
-
-
 
 
 main()
