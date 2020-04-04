@@ -16,11 +16,10 @@ def triangle_checker(a, b, c):
     b = sides[1]
     c = sides[2]
     if a + b > c:
-        calculator = tirangle_field_calc(a, b, c)
+        return
     else:
         print("Z takich boków nie da się zbudować trójkata.")
         exit()
-    return calculator
 
 
 def tirangle_field_calc(side_a, side_b, side_c):
@@ -35,8 +34,9 @@ def main():
     a = ask_user[0]
     b = ask_user[1]
     c = ask_user[2]
-    triangle = triangle_checker(a, b, c)
-    print(f"Pole powierzchni trójkąta o podanych bokach to: {triangle: .2f} cm2.")
+    # triangle = triangle_checker(a, b, c)
+    field = tirangle_field_calc(a, b, c)
+    print(f"Pole powierzchni trójkąta o podanych bokach to: {field: .2f} cm2.")
 
 
 main()
