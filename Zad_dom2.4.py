@@ -31,10 +31,6 @@ def engine(number, answer, shoot=0):
           f"Zajęło ci to {shoot} prób.")
 
 
-
-
-
-
 def main():
     print("Mam na mysli liczbę z przedziału 1 do 100. \nZgadniesz jaka to liczba?")
     misterious_number = number_generator()
