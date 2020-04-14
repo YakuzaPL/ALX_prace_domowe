@@ -1,7 +1,7 @@
 def user_data_input():
     while True:
         day = input("Proszę podać dzień w którym buty oddano do naprawy: ")
-        if day == "Poniedziałek" or day == "Wtorek" or day == "Śroida" or day == "Czwartek" or day == "Piątek" or day == "Sobota" or day == "Niedziela":
+        if day == "Poniedziałek" or day == "Wtorek" or day == "Środa" or day == "Czwartek" or day == "Piątek" or day == "Sobota" or day == "Niedziela":
             number_of_days = int(input("Proszę podać ile będzie trwała naprawa: : "))
         else:
             print("""Proszę wybrać:\n"
