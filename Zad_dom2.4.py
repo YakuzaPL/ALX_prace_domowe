@@ -7,7 +7,7 @@ def number_generator():
     return number
 
 
-def takeing_user_answer():
+def taking_user_answer():
 
     answer = int(input("\nJaką liczbę mam na myśli?\n"))
 
@@ -34,7 +34,7 @@ def engine(number, answer, shoot=0):
 def main():
     print("Mam na mysli liczbę z przedziału 0 do 999 . \nZgadniesz jaka to liczba?")
     misterious_number = number_generator()
-    user_answer = takeing_user_answer()
+    user_answer = taking_user_answer()
     engine(misterious_number, user_answer)
 
 
