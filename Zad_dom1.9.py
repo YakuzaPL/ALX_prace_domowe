@@ -1,13 +1,5 @@
-def number_generator():
-    generator = range(1, 100)
-
-    return generator
-
-
 def main():
-    generator = number_generator()
-
-    for number in generator:
+    for number in range(1, 100):
         if number % 15 == 0:
             print(number, end=" ")
             print("FizzBizz")
@@ -17,6 +9,8 @@ def main():
         elif number % 3 == 0:
             print(number, end=" ")
             print("Fizz")
+        else:
+            print(number)
 
 
 main()
