@@ -34,6 +34,7 @@ def main():
     a = ask_user[0]
     b = ask_user[1]
     c = ask_user[2]
+    triangle_checker(a, b, c)
     field = tirangle_field_calc(a, b, c)
     print(f"Pole powierzchni trójkąta o podanych bokach to: {field: .2f} cm2.")
 
