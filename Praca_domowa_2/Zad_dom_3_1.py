@@ -24,3 +24,27 @@ def area_of_the_circle(radius):
     return area
 
 
+def bmi_calc(weight, hight):
+    hight_m = hight / 100
+    hight_square = hight_m **2
+    bmi = weight / hight_square
+    return round(bmi, 2)
+
+
+def herons(side_a, side_b, side_c):
+    side_sum = side_a + side_b + side_c
+    area = 0.5 * side_sum
+    equasion_one = area * (area - side_a) * (area - side_b) * (area - side_c)
+    herons_s = math.sqrt(equasion_one)
+    return round(herons_s, 2)
+
+
+def kilometre_to_mile(kilometre):
+    mile = kilometre * 0.621371192
+    return round(mile, 2)
+
+
+def mile_to_kilometre(mile):
+    kilometre = mile * 1.6093
+    return round(kilometre, 2)
+

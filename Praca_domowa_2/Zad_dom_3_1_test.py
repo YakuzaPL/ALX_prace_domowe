@@ -1,4 +1,5 @@
-from Praca_domowa_2.Zad_dom_3_1 import foot_to_metre, which_is_bigger, average_counter, area_of_the_circle
+from Praca_domowa_2.Zad_dom_3_1 import foot_to_metre, which_is_bigger, average_counter, area_of_the_circle, bmi_calc, \
+    herons, kilometre_to_mile, mile_to_kilometre
 
 
 def test_foot_to_metre():
@@ -27,3 +28,24 @@ def test_area_of_the_circle():
     assert area_of_the_circle(2) == 12.566370614359172
     assert area_of_the_circle(0) == 0.0
     assert area_of_the_circle(23.4) == 1720.2104733996268
+
+
+def test_bmi_calc():
+    assert bmi_calc(135, 185) == 39.44
+    assert bmi_calc(100, 165) == 36.73
+    assert bmi_calc(80, 175) == 26.12
+
+
+def test_herons():
+    assert herons(4, 5, 6) == 9.92
+
+
+def test_kilometre_to_mile():
+    assert kilometre_to_mile(1) == 0.62
+    assert kilometre_to_mile(25) == 15.53
+
+
+def test_mile_to_kilometre():
+    assert mile_to_kilometre(1) == 1.61
+    assert mile_to_kilometre(100) == 160.93
+    assert mile_to_kilometre(0.5) == 0.80
