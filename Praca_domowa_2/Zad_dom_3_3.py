@@ -1,8 +1,5 @@
 
-# - `suma_wiekszych(liczby, x)` – zwraca (`return`) sumę liczb z listy `liczby`, które są większe niż `x`
-# - `ile_wiekszych(liczby, x)` – liczy ile elementów listy `liczby` jest większych od liczby `x`
-# - `wypisz_podzielne(liczby, x)` – wypisuje (`print`) wszystkie te liczby z listy `liczby`, które są podzielne przez `x`
-# - `pierwsza_podzielna(liczby, x)` – zwraca (`return`) pierwszą znalezioną w `liczby` liczbę podzielną przez `x`; zwraca `None`, jeśli takiej liczby tam nie ma
+
 # - `znajdz_wspolny(liczby1, liczby2)` – zwraca element (liczbę), który występuje zarówno w liście `liczby1`, jak i `liczby2`; zwraca `None`, jeśli takiego elementu nie ma
 
 
@@ -64,8 +61,46 @@ def biggers_sum(list_of_numbers, x=154):
 
     return sum(bigger)
 
+
+def how_many_bigger(list_of_numbers, x=154):
+    bigger = []
+    for number in list_of_numbers:
+        if number > x:
+            bigger.append(number)
+
+    return len(bigger)
+
+
+def printing_divisible(list_of_numbers, x=2):
+    divisible = []
+    for number in list_of_numbers:
+        if number % x == 0:
+            divisible.append(number)
+
+    return divisible
+
+
+def printing_first_divisible(list_of_numbers, x=2):
+
+    for number in list_of_numbers:
+        if number % x == 0:
+            return number
+
+
+def common_elements(list_of_numbers, list_of_numbers2):
+
+    common_elements_var = []
+    for number in list_of_numbers:
+        if number in list_of_numbers2:
+            common_elements_var.append(number)
+
+    return  common_elements_var
+
+
 def main():
     list_of_numbers = [155, 201, 65, 2, -8, 10, 20, 30, 40]
+    list_of_numbers2 = [20, 89, 10, 47]
+
     print("Point 1")
     print(sum_of_numbers(list_of_numbers))
     print(40 * "*")
@@ -96,8 +131,28 @@ def main():
     print(40 * "*")
     print("\n")
 
-    print("Point 6")
+    print("Point 7")
     print(biggers_sum(list_of_numbers))
+    print(40 * "*")
+    print("\n")
+
+    print("Point 8")
+    print(how_many_bigger(list_of_numbers))
+    print(40 * "*")
+    print("\n")
+
+    print("Point 9")
+    print(printing_divisible(list_of_numbers))
+    print(40 * "*")
+    print("\n")
+
+    print("Point 10")
+    print(printing_first_divisible(list_of_numbers))
+    print(40 * "*")
+    print("\n")
+
+    print("Point 11")
+    print(common_elements(list_of_numbers, list_of_numbers2))
     print(40 * "*")
     print("\n")
 
