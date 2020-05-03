@@ -4,7 +4,7 @@ def days_of_month_calculator(month_name, months):
     return f"{month_name} ma {days3} dni."
 
 
-def february_calculatro(month_name, months, year):
+def february_calculator(month_name, months, year):
 
     if month_name == "Luty":
 
@@ -35,7 +35,7 @@ def main():
     name_of_the_month = input("Proszę wprowadzić nazwę miesiąca: ")
     if name_of_the_month.capitalize() == "Luty":
         year = int(input("Proszę podać rok: "))
-        answer = february_calculatro(name_of_the_month.capitalize(), months, year)
+        answer = february_calculator(name_of_the_month.capitalize(), months, year)
         print(answer)
     else:
         answer = days_of_month_calculator(name_of_the_month.capitalize(), months)
