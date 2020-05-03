@@ -1,4 +1,10 @@
-def days_of_month_calculator(month_name, months, year = 0):
+def days_of_month_calculator(month_name, months):
+
+    days3 = months[month_name]
+    return f"{month_name} ma {days3} dni."
+
+
+def february_calculatro(month_name, months, year):
 
     if month_name == "Luty":
 
@@ -8,9 +14,6 @@ def days_of_month_calculator(month_name, months, year = 0):
         else:
             days2 = months[month_name][0]
             return f"W roku {year}, {month_name} miał {days2} dni."
-    else:
-        days3 = months[month_name]
-        return f"{month_name} ma {days3} dni."
 
 
 def main():
@@ -32,8 +35,11 @@ def main():
     name_of_the_month = input("Proszę wprowadzić nazwę miesiąca: ")
     if name_of_the_month.capitalize() == "Luty":
         year = int(input("Proszę podać rok: "))
-    answer = days_of_month_calculator(name_of_the_month.capitalize(), months, year)
-    print(answer)
+        answer = february_calculatro(name_of_the_month.capitalize(), months, year)
+        print(answer)
+    else:
+        answer = days_of_month_calculator(name_of_the_month.capitalize(), months)
+        print(answer)
 
 
 main()
