@@ -4,10 +4,10 @@ def days_of_month_calculator(month_name, months):
         year = input("Proszę podać rok: ")
         if int(year) % 4 == 0:
             days = months[month_name][-1]
-            return f"W roku {year}, {month_name} miały {days} dni."
+            return f"W roku {year}, {month_name} miał {days} dni."
         else:
             days2 = months[month_name][0]
-            return f"W roku {year}, {month_name} miały {days2} dni."
+            return f"W roku {year}, {month_name} miał {days2} dni."
     else:
         days3 = months[month_name]
         return f"{month_name} ma {days3} dni."
