@@ -101,16 +101,20 @@ def printing_divisible(list_of_numbers, x=2):
         if number % x == 0:
             divisible.append(number)
 
-    return divisible
+    print(divisible)
+    return
 
 
 def printing_first_divisible(list_of_numbers, x=2):
     if len(list_of_numbers) == 0:
+
         return 0
 
     for number in list_of_numbers:
         if number % x == 0:
-            return number
+            print(number)
+
+    return
 
 
 def common_elements(list_of_numbers, list_of_numbers2):
