@@ -176,12 +176,12 @@ def main():
     print("\n")
 
     print("Point 9")
-    print(printing_divisible(list_of_numbers))
+    printing_divisible(list_of_numbers)
     print(40 * "*")
     print("\n")
 
     print("Point 10")
-    print(printing_first_divisible(list_of_numbers))
+    printing_first_divisible(list_of_numbers)
     print(40 * "*")
     print("\n")
 
