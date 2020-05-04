@@ -1,8 +1,4 @@
 
-
-# - `znajdz_wspolny(liczby1, liczby2)` – zwraca element (liczbę), który występuje zarówno w liście `liczby1`, jak i `liczby2`; zwraca `None`, jeśli takiego elementu nie ma
-
-
 def sum_of_numbers(list_of_numbers):
     total_numbers = 0
     if len(list_of_numbers) == 0:
