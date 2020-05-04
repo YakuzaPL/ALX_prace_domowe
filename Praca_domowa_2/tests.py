@@ -1,8 +1,14 @@
-list_of_numbers = [50, 120, 60, 10, 20, 30, 40]
+def sum_of_numbers(list_of_numbers):
+    total_numbers = 0
+    if len(list_of_numbers) == 0:
+        return total_numbers
 
-a = list_of_numbers[0]
-for number in list_of_numbers:
-    if number < a:
-        a = number
+    for number in list_of_numbers:
+        total_numbers += number
 
-print(a)
+    return total_numbers
+
+
+list_of_numbers = []
+
+print(sum_of_numbers(list_of_numbers))
