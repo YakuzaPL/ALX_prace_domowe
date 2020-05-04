@@ -2,7 +2,7 @@ def days_of_month_calculator(month_name, months):
 
     if month_name == "Luty":
         year = input("Proszę podać rok: ")
-        if int(year) % 4 == 0:
+        if int(year) % 4 == 0 and int(year) % 100 != 0 or int(year) % 400 == 0:
             days = months[month_name][-1]
             return f"W roku {year}, {month_name} miał {days} dni."
         else:

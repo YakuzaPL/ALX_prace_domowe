@@ -8,7 +8,7 @@ def february_calculator(month_name, months, year):
 
     if month_name == "Luty":
 
-        if int(year) % 4 == 0:
+        if int(year) % 4 == 0 and int(year) % 100 != 0 or int(year) % 400 == 0:
             days1 = months[month_name][-1]
             return days1
         else:
