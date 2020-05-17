@@ -20,9 +20,7 @@ class AdvertCollector():
     def __init__(self):
         self.ad_collection = dict()
 
-    def add_advertisment(self, advertisement: Advertisement, *args):
-
-        advert_num = 1
+    def add_advertisment(self, advertisement: Advertisement, advert_num=1):
 
         self.ad_collection = {advert_num: {"title": advertisement.title,
                                            "Content": advertisement.description,
@@ -33,14 +31,14 @@ class AdvertCollector():
                                            }}
         advert_num += 1
 
-    def adv_printer(self) -> str:
+    def adv_printer(self):
         for ad in self.ad_collection.values():
             print(self.ad_collection.keys())
             print("-" * 35)
             for cat, cont in ad.items():
                 print(f"{cat}: {cont}")
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.adv_printer()
 
 
@@ -50,5 +48,11 @@ advert2 = Advertisement("Sprzedam2", "sdafcniksdacniuansc", 659895, "Zenek", "69
 advert3 = Advertisement("Sprzedam3", "sdafcniksdacniuansc", 659895, "Aga", "844-647-872", "az@mail.com")
 
 colection = AdvertCollector()
-colection.add_advertisment(advert1, advert2, advert3)
+colection.add_advertisment(advert1)
+colection.add_advertisment(advert2)
+colection.add_advertisment(advert3)
 colection.adv_printer()
+
+print(30 * "*")
+a = colection.ad_collection.keys()
+print(a)
