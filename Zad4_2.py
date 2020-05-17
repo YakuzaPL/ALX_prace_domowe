@@ -1,5 +1,4 @@
-class Advertisement:
-
+class AdvertCollector():
     def __init__(self, title, description, price, vendor_name, vendor_tel, vendor_mail):
         self.title = title
         self.description = description
@@ -31,6 +30,6 @@ class Advertisement:
         return self.adv_printer()
 
 
-ad1 = Advertisement("auto na sprzedaż1", "bsndcijsancxjiansicdxna", 32580, "Jakub", "509-998-666", "jz@mail.com")
+ad1 = AdvertCollector("auto na sprzedaż1", "bsndcijsancxjiansicdxna", 32580, "Jakub", "509-998-666", "jz@mail.com")
 ad1.add_advertisment()
 ad1.adv_printer()
