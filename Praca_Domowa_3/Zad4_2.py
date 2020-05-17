@@ -58,6 +58,11 @@ colection.adv_printer()
 print(30 * "*")
 a = colection.ad_colection.keys()
 b = colection.ad_colection
-print(a)
-for x, y in b.items():
-    print(x, y)
+
+a = 1
+for ad in b.values():
+    print("-"*30)
+    print(a)
+    a += 1
+    for cat, cont in ad.items():
+        print(f"{cat}: {cont}")
