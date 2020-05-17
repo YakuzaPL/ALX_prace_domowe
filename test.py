@@ -7,20 +7,19 @@ advert = {1: {"title": "Tytuł1",
               "Content": "ra, la, la, la, la",
               "vendro name": "Michał",
               "Vendor tel": "506-555-258",
-              "Vendor_mail": "mj@mail.com"},
+             "Vendor_mail": "mj@mail.com"},
           3: {"title": "Tytuł3",
-              "Content": "Oh my, oh my",
-              "vendro name": "Aga",
-              "Vendor tel": "513-888-258",
-              "Vendor_mail": "az@mail.com"
-              }}
-
-advert[4] = {"title": "Tytuł4",
-              "Content": "Oh my, oh my",
-              "vendro name": "Aga",
-              "Vendor tel": "513-888-258",
-              "Vendor_mail": "az@mail.com"
-              }
+                                                                                    "Content": "Oh my, oh my",
+                                                                                    "vendro name": "Aga",
+                                                                                    "Vendor tel": "513-888-258",
+                                                                                    "Vendor_mail": "az@mail.com"
+                                                                                    },
+          4: {"title": "Tytuł4",
+                                                                                           "Content": "Oh my, oh my",
+                                                                                           "vendro name": "Aga",
+                                                                                           "Vendor tel": "513-888-258",
+                                                                                           "Vendor_mail": "az@mail.com"
+                                                                                           }}
 
 for ad in advert.values():
     print("-" * 35)

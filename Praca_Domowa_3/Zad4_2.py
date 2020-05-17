@@ -21,23 +21,24 @@ class Advertisement:
 
 class AdvertCollector():
     def __init__(self):
-        self.ad_colection = {}
+        self.advert_colection = dict()
 
-    def add_advertisment(self, advertisement: Advertisement, advert_num=1):
+    def add_advertisment(self, advertisement: Advertisement, number):
 
         for i in range(1, 4):
-            self.ad_colection[advert_num] = advertisement.make_adv()
-            advert_num += 1
+            self.advert_colection[number] = advertisement.make_adv()
 
-    def adv_printer(self):
-        for ad in self.ad_colection.values():
+        return self.advert_colection
+
+    def print_advert(self):
+        for element in self.advert_colection.values():
 
             print("-" * 35)
-            for cat, cont in ad.items():
+            for cat, cont in element.items():
                 print(f"{cat}: {cont}")
 
     def __str__(self):
-        return self.adv_printer()
+        return self.print_advert()
 
 
 # advert = AdvertCollector()
@@ -48,16 +49,16 @@ advert3 = Advertisement("Sprzedam3", "sdafcniksdacniuansc", 659895, "Aga", "844-
 print(advert1)
 
 colection = AdvertCollector()
-colection.add_advertisment(advert1)
+colection.add_advertisment(advert1, 1)
 # colection.adv_printer()
-colection.add_advertisment(advert2)
+colection.add_advertisment(advert2, 2)
 # colection.adv_printer()
-colection.add_advertisment(advert3)
-colection.adv_printer()
+colection.add_advertisment(advert3, 3)
+colection.print_advert()
 
 print(30 * "*")
-a = colection.ad_colection.keys()
-b = colection.ad_colection
+a = colection.advert_colection.keys()
+b = colection.advert_colection
 
 a = 1
 for ad in b.values():
