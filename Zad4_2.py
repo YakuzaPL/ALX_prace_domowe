@@ -8,32 +8,30 @@ class Advertisement:
         self.vendor_tel = vendor_tel
         self.vendro_mail = vendor_mail
 
-    def make_adv(self) -> str:
-        return f"Tytuł: {self.title}\n {self.description}\n Cena {self.price}\n {self.vendor_name}:\n " \
-               f"tel: {self.vendor_tel}\n mail: {self.vendro_mail}"
-
-    def __str__(self):
-        return self.make_adv()
+    def make_adv(self):
+        advert = {"title": self.title,
+                  "Content": self.description,
+                  "Price": self.price,
+                  "vendro name": self.vendor_name,
+                  "Vendor tel": self.vendor_tel,
+                  "Vendor_mail": self.vendro_mail
+                  }
+        return advert
 
 
 class AdvertCollector():
     def __init__(self):
-        self.ad_collection = dict()
+        self.ad_colection = {}
 
     def add_advertisment(self, advertisement: Advertisement, advert_num=1):
 
-        self.ad_collection = {advert_num: {"title": advertisement.title,
-                                           "Content": advertisement.description,
-                                           "Price": advertisement.price,
-                                           "vendro name": advertisement.vendor_name,
-                                           "Vendor tel": advertisement.vendor_tel,
-                                           "Vendor_mail": advertisement.vendro_mail
-                                           }}
-        advert_num += 1
+        for i in range(1, 4):
+            self.ad_colection[advert_num] = advertisement.make_adv()
+            advert_num += 1
 
     def adv_printer(self):
-        for ad in self.ad_collection.values():
-            print(self.ad_collection.keys())
+        for ad in self.ad_colection.values():
+
             print("-" * 35)
             for cat, cont in ad.items():
                 print(f"{cat}: {cont}")
@@ -47,12 +45,19 @@ advert1 = Advertisement("Sprzedam1", "sdafcniksdacniuansc", 659895, "Jakub", "56
 advert2 = Advertisement("Sprzedam2", "sdafcniksdacniuansc", 659895, "Zenek", "693-258-987", "zz@mail.com")
 advert3 = Advertisement("Sprzedam3", "sdafcniksdacniuansc", 659895, "Aga", "844-647-872", "az@mail.com")
 
+print(advert1)
+
 colection = AdvertCollector()
 colection.add_advertisment(advert1)
+# colection.adv_printer()
 colection.add_advertisment(advert2)
+# colection.adv_printer()
 colection.add_advertisment(advert3)
 colection.adv_printer()
 
 print(30 * "*")
-a = colection.ad_collection.keys()
+a = colection.ad_colection.keys()
+b = colection.ad_colection
 print(a)
+for x, y in b.items():
+    print(x, y)
