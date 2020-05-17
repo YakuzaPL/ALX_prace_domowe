@@ -1,4 +1,5 @@
-class AdvertCollector():
+class Advertisement:
+
     def __init__(self, title, description, price, vendor_name, vendor_tel, vendor_mail):
         self.title = title
         self.description = description
@@ -6,6 +7,18 @@ class AdvertCollector():
         self.vendor_name = vendor_name
         self.vendor_tel = vendor_tel
         self.vendro_mail = vendor_mail
+
+    def make_adv(self) -> str:
+        return f"Tytuł: {self.title}\n {self.description}\n Cena {self.price}\n {self.vendor_name}:\n " \
+               f"tel: {self.vendor_tel}\n mail: {self.vendro_mail}"
+
+    def __str__(self):
+        return self.make_adv()
+
+
+class AdvertCollector(Advertisement):
+    def __init__(self, title, description, price, vendor_name, vendor_tel, vendor_mail):
+        super().__init__(title, description, price, vendor_name, vendor_tel, vendor_mail)
         self.ad_collection = dict()
 
     def add_advertisment(self):
