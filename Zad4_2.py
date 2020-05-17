@@ -20,7 +20,7 @@ class AdvertCollector():
     def __init__(self):
         self.ad_collection = dict()
 
-    def add_advertisment(self, advertisement: Advertisement):
+    def add_advertisment(self, advertisement: Advertisement, *args):
 
         advert_num = 1
 
@@ -45,10 +45,10 @@ class AdvertCollector():
 
 
 # advert = AdvertCollector()
-advert1 = Advertisement("Sprzedam", "sdafcniksdacniuansc", 659895, "Jakub", "560-987-744", "jz@mail.com")
+advert1 = Advertisement("Sprzedam1", "sdafcniksdacniuansc", 659895, "Jakub", "560-987-744", "jz@mail.com")
 advert2 = Advertisement("Sprzedam2", "sdafcniksdacniuansc", 659895, "Zenek", "693-258-987", "zz@mail.com")
 advert3 = Advertisement("Sprzedam3", "sdafcniksdacniuansc", 659895, "Aga", "844-647-872", "az@mail.com")
 
 colection = AdvertCollector()
-colection.add_advertisment(advert1)
+colection.add_advertisment(advert1, advert2, advert3)
 colection.adv_printer()
