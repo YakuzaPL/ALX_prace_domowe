@@ -45,4 +45,3 @@ colector.add_advertisment(advert2)
 colector.add_advertisment(advert3)
 
 print(colector.print_advert())
-
