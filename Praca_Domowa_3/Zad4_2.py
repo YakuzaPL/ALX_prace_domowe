@@ -1,6 +1,4 @@
 
-
-
 class Advertisement:
 
     def __init__(self, title, description, price, vendor_name, vendor_tel, vendor_mail):
@@ -34,16 +32,13 @@ class AdvertCollector():
             for i in advert:
                 print(i)
 
-    def price_filterer(self, more_than: int = 0, less_than: int = 0):
-        for advert in self.advert_colection:
-            for content in advert:
-                if type(content) == int:
-                    if more_than < content < less_than:
-                        for advert_list in self.advert_colection:
-                            if content in advert_list:
-                                print(30 * "-")
-                                for data in advert_list:
-                                    print(data)
+    def price_filterer(self, advert_colection):
+        filter_of_lists = filter(lambda advert: advert[2] < 3500, advert_colection)
+        filtered_advertisment = list(filter_of_lists)
+        for advertisment in filtered_advertisment:
+            print(30*"-")
+            for information in advertisment:
+                print(information)
 
     def __str__(self):
         return self.print_advert()
@@ -60,4 +55,5 @@ colector.add_advertisment(advert3)
 
 # print(colector.print_advert())
 
-colector.price_filterer(500, 3000)
+# colector.price_filterer(500, 3000)
+colector.price_filterer(colector.advert_colection)
