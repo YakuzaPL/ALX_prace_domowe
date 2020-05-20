@@ -10,14 +10,20 @@ class Train():
         return self.description()
 
     def speed_up(self, new_speed):
+
         old_speed = self.speed
         self.speed = new_speed
-        fuel_usage = (self.speed * old_speed) * (old_speed/100)
-        old_fuel = self.fuel_quantity
-        self.fuel_quantity = old_fuel - fuel_usage
+        if new_speed >= old_speed * 1.75:
+            self.speed = old_speed
+        elif self.fuel_quantity <= 0:
+            self.speed = old_speed
+        else:
+            fuel_usage = (self.speed * old_speed) * (old_speed/100)
+            old_fuel = self.fuel_quantity
+            self.fuel_quantity = old_fuel - fuel_usage
 
 
 train = Train()
-train.speed_up(70)
+train.speed_up(15)
 
 print(train)
