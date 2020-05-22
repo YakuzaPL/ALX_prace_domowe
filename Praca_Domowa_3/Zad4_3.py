@@ -24,6 +24,6 @@ class Train():
 
 
 train = Train()
-train.speed_up(15)
+train.speed_up(12)
 
 print(train)
